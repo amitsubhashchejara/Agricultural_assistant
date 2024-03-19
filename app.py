@@ -3,10 +3,7 @@ import os
 import google.generativeai as gemini
 import textwrap
 
-from dotenv import load_dotenv, find_dotenv
-
-_ = load_dotenv(find_dotenv())
-google_palm_api= os.getenv("gemini_api")
+google_palm_api= st.secrets["GEMINI_API"]
 
 gemini.configure(
     api_key=google_palm_api)
