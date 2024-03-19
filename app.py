@@ -15,8 +15,6 @@ def to_markdown(text):
   text = text.replace('*', '')
   return ((textwrap.indent(text,"", predicate=lambda _: True)))
 
-# Create an empty container
-placeholder = st.empty()
 
 
 def output(txt):
