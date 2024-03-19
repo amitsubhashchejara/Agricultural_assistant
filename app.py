@@ -43,6 +43,16 @@ def output(txt):
                             decorator=decorator)
     completion=model.generate_content(prompt)
     return to_markdown(completion.text)
+
+page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("https://images.pexels.com/photos/134879/pexels-photo-134879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    }
+    </style>
+    ''' 
+st.markdown(page_bg_img, unsafe_allow_html=True)
     
 
 if "default" not in st.session_state:
